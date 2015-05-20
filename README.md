@@ -30,9 +30,8 @@ What it doesn't do:
 
 ###git_create_keys.sh
 
-As the name suggests, this will create a key-pair inteded for use with git, it will supress questions asked when 
-creating the key and will output the public key to stdout such that the user can simply copy and paste this 
-into the github SSH keys section of the website.
+As the name suggests, this will create a key-pair inteded for use with git, simply provide your OAuth token at the 
+begining of the script and it will do all the leg-work.
 
 ###Usage: 
 
