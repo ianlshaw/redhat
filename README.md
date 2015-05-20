@@ -49,3 +49,4 @@ Assumptions:
 
 	chmod +x rdiff_behind_bastion.sh
 	./rdiff_behind_bastion.sh <remote_hostname> <file_to_be_compared>
+
