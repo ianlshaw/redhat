@@ -10,7 +10,7 @@ enabled=1
 gpgcheck = 0" > /etc/yum.repos.d/rh6.6
 
 #Update subscription-manager and dependencies
-yum update subscription-manager* python-rhsm*
+yum -y update subscription-manager* python-rhsm*
 
 #Remove local repo
 rm -f /etc/yum.repos.d/rh6.6
