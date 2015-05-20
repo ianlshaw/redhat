@@ -1,6 +1,6 @@
 # Redhat tools, scripts and assorted laziness
 
-###RHEL_Auto_subscribe.sh
+###rh_auto_subscribe.sh
 
 Assumptions:
 
@@ -9,8 +9,8 @@ Assumptions:
 
 ###Usage:
 	
-	chmod +x RHEL_Auto_subscribe.sh
-	./RHEL_Auto_subscribe.sh
+	chmod +x rh_auto_subscribe.sh
+	./rh_auto_subscribe.sh
 
 
 The script will do the following:
