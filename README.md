@@ -2,7 +2,7 @@
 
 ###rh_auto_subscribe.sh
 
-Assumptions:
+- Assumptions:
 
 	You have a valid Red Hat Portal account
 	You have created "Activation Keys" within the Red Hat Portal with subscriptions attached.
@@ -37,3 +37,15 @@ begining of the script and it will do all the leg-work.
 
 	chmod +x git_create_keys.sh
 	./git_create_keys.sh
+
+
+###rdiff_behind_bastion.sh
+
+Assumptions:
+	
+- You are behind a bastion administration server or SSH relay such that you cannot use "SSH Remote Command" option
+
+###Usage:
+
+	chmod +x rdiff_behind_bastion.sh
+	./rdiff_behind_bastion.sh <remote_hostname> <file_to_be_compared>
