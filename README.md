@@ -1,6 +1,6 @@
 # Redhat tools, scripts and assorted laziness
 
-RHEL_Auto_subscribe.sh
+##RHEL_Auto_subscribe.sh
 
 Assumptions:
 
