@@ -1,6 +1,7 @@
 # Redhat tools, scripts and assorted laziness
 
 RHEL_Auto_subscribe.sh
+
 	The script will do the following:
 	Inject local repo
 	Update subscription-manager and dependencies
