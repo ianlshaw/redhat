@@ -2,6 +2,12 @@
 
 RHEL_Auto_subscribe.sh
 
+Assumptions:
+
+	You have a valid Red Hat Portal account
+	You have created "Activation Keys" within the Red Hat Portal with subscriptions attached.
+
+
 The script will do the following:
 
 	Inject local repo
