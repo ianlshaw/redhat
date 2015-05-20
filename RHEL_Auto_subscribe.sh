@@ -4,8 +4,8 @@
 
 #Inject local repo
 echo "[rh6.6]
-name=added from: opsbuild http shares
-baseurl=http://opsbuild01/install66/
+name=added from: http shares
+baseurl=http://localrepo/location/
 enabled=1
 gpgcheck = 0" > /etc/yum.repos.d/rh6.6
 
