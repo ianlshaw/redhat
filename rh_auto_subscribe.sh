@@ -2,12 +2,15 @@
 #Magical RH autosubscriber.
 #Writen by Ian Shaw
 
+#Purge existing repos
+rm -f /etc/yum.repos.d/*
+
 #Inject local repo
 echo "[rh6.6]
 name=added from: http shares
 baseurl=http://localrepo/location/
 enabled=1
-gpgcheck = 0" > /etc/yum.repos.d/rh6.6
+gpgcheck = 0" > /etc/yum.repos.d/rh6.6.repo
 
 #Update subscription-manager and dependencies
 yum -y update subscription-manager* python-rhsm*
