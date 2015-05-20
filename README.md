@@ -15,11 +15,11 @@ Assumptions:
 
 The script will do the following:
 
-	Inject local repo
-	Update subscription-manager and dependencies
-	Remove local repo
-	Add proxy configuration to subscription-manager
-	Finally, it will ascertain if the system is physical or virtual and then apply the appropriate activation key
+-Inject local repo
+-Update subscription-manager and dependencies
+-Remove local repo
+-Add proxy configuration to subscription-manager
+-Finally, it will ascertain if the system is physical or virtual and then apply the appropriate activation key
 
 
 What it doesn't do:
