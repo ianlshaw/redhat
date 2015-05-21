@@ -16,10 +16,7 @@
 The script will do the following:
 
 - Check if the web-proxy is accessible
-- Inject local repo
-- Update subscription-manager and dependencies
-- Remove local repo
-- Add proxy configuration to subscription-manager
+- Check the version of subscription-manager and if it's below 1 attempt to update it via a local repo
 - Finally, it will ascertain if the system is physical or virtual and then apply the appropriate activation key
 
 
