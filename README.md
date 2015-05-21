@@ -2,10 +2,10 @@
 
 ###rh_auto_subscribe.sh
 
-- Assumptions:
+Assumptions:
 
-	You have a valid Red Hat Portal account
-	You have created "Activation Keys" within the Red Hat Portal with subscriptions attached.
+- You have a valid Red Hat Portal account
+- You have created "Activation Keys" within the Red Hat Portal with subscriptions attached.
 
 ###Usage:
 	
