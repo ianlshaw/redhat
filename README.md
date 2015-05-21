@@ -22,7 +22,7 @@ The script will do the following:
 
 What it doesn't do:
 
--  Handle outputs from dmidecode -s system-product-name other than KVM or "else". This means if a system returns anything other than KVM to this command, it will receive a physical NFR licence, we don't have many of these at all and as such this may cause some issues.
+-  Handle outputs from dmidecode -s system-product-name other than KVM or "else". This means if a system returns anything other than KVM to this command, it will receive a physical NFR licence.
 
 
 ###git_create_keys.sh
