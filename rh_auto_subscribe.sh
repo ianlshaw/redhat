@@ -3,8 +3,11 @@
 #Writen by Ian Shaw
 
 #Functions
+
 function check_firewall() {
-        rport=$(timeout 1 bash -c '>/dev/tcp/193.133.96.34/80' &&   echo "Port open" ||   echo "Port closed")
+	proxy="193.133.96.34"
+        rport=$(timeout 1 bash -c ">/dev/tcp/$proxy/80" &&   echo "Port open" ||   echo "Port closed")
+	#rport=$(timeout 1 bash -c '>/dev/tcp/193.133.96.34/80' &&   echo "Port open" ||   echo "Port closed")
         echo $rport
         if [ "$rport" == "Port closed" ] ; then
                 echo "This machine does not have firewall access to the Web Proxy."
