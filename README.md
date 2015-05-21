@@ -15,6 +15,7 @@
 
 The script will do the following:
 
+- Check if the web-proxy is accessible
 - Inject local repo
 - Update subscription-manager and dependencies
 - Remove local repo
