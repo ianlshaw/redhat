@@ -11,3 +11,5 @@ cd /tmp
 
 scp $username@$bastion:root@$host:$file .
 diff hosts /etc/hosts
+
+#consider removing the "pulled" file

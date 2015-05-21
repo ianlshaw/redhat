@@ -24,8 +24,13 @@ The script will do the following:
 
 What it doesn't do:
 
+<<<<<<< HEAD
 - Ascertain and act upon the current version of subscription-manager, it simply assumes this is out of date and attempts to update via the local repo
 - Handle outputs from dmidecode -s system-product-name other than KVM or "else". This means if a system returns anything other than KVM to this command, it will receive a physical NFR licence, we don't have many of these at all and as such this may cause some issues.
+=======
+- Ascertain and act upon the current version of subscription-manager, it simply assumes this is out of date and attempts to update via the local repo
+- Handle outputs from dmidecode -s system-product-name other than KVM or "else". This means if a system returns anything other than KVM to this command, it will receive a physical NFR licence.
+>>>>>>> 708df27dca15e6d97be9ef61bcae8987c40d3b7b
 
 
 ###git_create_keys.sh
@@ -49,3 +54,4 @@ Assumptions:
 
 	chmod +x rdiff_behind_bastion.sh
 	./rdiff_behind_bastion.sh <remote_hostname> <file_to_be_compared>
+
