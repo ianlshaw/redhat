@@ -20,7 +20,8 @@ function check_firewall() {
 function fix_sub_manager() {
 	#Local Repo Vars
 	repo=repohostname
-	branch=branch	
+	branch5=examplebranch	
+	branch6=examplebranch
 
 	#Ascertain the current subscription-manager version
 	subm_ver=$(rpm -q subscription-manager --queryformat "%{VERSION} \n" | cut -c 1)
@@ -38,9 +39,9 @@ function fix_sub_manager() {
 
 		#Inject local repo
 		if [ "$release_ver" -eq 6 ] ; then
-		echo -e  "[rh6.6]\nname=added from: http shares\nbaseurl=http://${repo}/${branch}/\nenabled=1" > /etc/yum.repos.d/rh6.6.repo
+			echo -e  "[rh6.6]\nname=added from: http shares\nbaseurl=http://${repo}/${branch6}/\nenabled=1" > /etc/yum.repos.d/rh6.6.repo
 		elif [ "$release_ver" -eq 5 ] ; then
-		                echo -e  "[rh5.11]\nname=added from: http shares\nbaseurl=http://${repo}/${branch}/\nenabled=1" > /etc$		
+	                echo -e  "[rh5.11]\nname=added from: http shares\nbaseurl=http://${repo}/${branch5}/\nenabled=1" > /etc/yum.repos.d/rh5.11.repo	
 
 		fi		
 
