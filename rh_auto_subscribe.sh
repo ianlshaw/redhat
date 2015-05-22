@@ -5,7 +5,7 @@
 #Functions
 function check_firewall() {
 	proxy="x.x.x.x"
-        rport=$(timeout 1 bash -c ">/dev/tcp/$proxy/80" &&   echo "Port open" ||   echo "Port closed")
+	rport=$(bash -t  -c ">/dev/tcp/$proxy/80" &&   echo "Port open" ||   echo "Port closed")
         echo $rport
         if [ "$rport" == "Port closed" ] ; then
                 echo "This machine does not have firewall access to the Web Proxy."
