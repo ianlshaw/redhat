@@ -54,13 +54,14 @@ function fix_sub_manager() {
 }
 
 function subscribe() {
-	#Add proxy configuration to subscription-manager
-	subscription-manager config --server.proxy_hostname=x.x.x.x --server.proxy_port=80
-
 	#Subscription variables
+	proxy_hostname=xxxxxx
 	org=xxxxxx
 	virt_key=xxxxxx
 	physical_key=xxxxxx
+
+        #Add proxy configuration to subscription-manager
+	subscription-manager config --server.proxy_hostname=$proxy_hostname --server.proxy_port=80
 
 	#Obtain the type of system. Physical/Virtual
 	type=$(dmidecode -s system-product-name)
