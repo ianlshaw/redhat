@@ -5,6 +5,16 @@
 #Functions
 function check_firewall() {
 	proxy="x.x.x.x"
+	
+	if ping -c 1 $proxy &> /dev/null
+		then
+	  echo "Proxy is pingable. That's a good start."
+	else
+	  echo "Proxy ${proxy} cannot be pinged, you should investigate this."
+	  exit 0
+	fi
+
+
 	rport=$(bash -t  -c ">/dev/tcp/$proxy/80" &&   echo "Port open" ||   echo "Port closed")
         echo $rport
         if [ "$rport" == "Port closed" ] ; then
