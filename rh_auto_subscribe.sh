@@ -18,8 +18,14 @@ function check_firewall() {
 }
 
 function fix_sub_manager() {
+	#Local Repo Vars
+	repo=repohostname
+	branch=branch	
+
 	#Ascertain the current subscription-manager version
 	subm_ver=$(rpm -q subscription-manager --queryformat "%{VERSION} \n" | cut -c 1)
+	#Get the current release version
+	release_ver=$(cat /etc/redhat-release | awk '{ print $7 }' |  cut -c 1)
 
 	if [ "$subm_ver" -ge 1 ] ; then
 		#Do nothing
@@ -31,7 +37,12 @@ function fix_sub_manager() {
 		rm -f /etc/yum.repos.d/*
 
 		#Inject local repo
-		echo -e  "[rh6.6]\nname=added from: http shares\nbaseurl=http://localrepo/location/\nenabled=1" > /etc/yum.repos.d/rh6.6.repo
+		if [ "$release_ver" -eq 6 ] ; then
+		echo -e  "[rh6.6]\nname=added from: http shares\nbaseurl=http://${repo}/${branch}/\nenabled=1" > /etc/yum.repos.d/rh6.6.repo
+		elif [ "$release_ver" -eq 5 ] ; then
+		                echo -e  "[rh5.11]\nname=added from: http shares\nbaseurl=http://${repo}/${branch}/\nenabled=1" > /etc$		
+
+		fi		
 
 		#Update subscription-manager and dependencies
 		yum -y update subscription-manager* python-rhsm*
