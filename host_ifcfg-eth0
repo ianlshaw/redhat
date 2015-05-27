@@ -1,0 +1,9 @@
+DEVICE="eth0"
+NM_CONTROLLED="no"
+ONBOOT="yes"
+BOOTPROTO=static
+TYPE=Ethernet
+IPV6INIT=no
+USERCTL=no
+BRIDGE=br0
+
