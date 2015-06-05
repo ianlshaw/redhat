@@ -1,15 +1,15 @@
 #!/bin/sh
-	#Created by Ian Shaw
+        #Created by Ian Shaw
 
-set host [lindex $argv 0]	
-set file [lindex $argv 1]
+host=$1
+file=$2
 
-bastion=x.x.x.x
-username=<username>
+echo "Getting $file from $host"
+
+bastion=10.44.198.71
+username=iansha.adm
 
 cd /tmp
 
 scp $username@$bastion:root@$host:$file .
-diff hosts /etc/hosts
-
-#consider removing the "pulled" file
+diff $(basename $file) $file
